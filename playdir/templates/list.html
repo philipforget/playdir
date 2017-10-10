@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ path }}</title>
+  </head>
+  <body>
+    {% if dirs %}
+    <ul>
+    {% for dir in dirs %}
+      <li><a href="{{ dir }}/">{{ dir }}</a></li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if files|length %}
+    <ul>
+    {% for file in files %}
+      <li><a href="{{ file }}">{{ file }}</a></li>
+    {% endfor %}
+    </ul>
+    <a href="{{ playlist_filename }}">playlist.m3u8</a>
+    {% endif %}
+  </body>
+</html>

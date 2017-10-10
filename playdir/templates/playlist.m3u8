@@ -1,0 +1,8 @@
+#EXTM3U
+#EXT-X-VERSION:5.0
+#EXT-X-TARGETDURATION:{{ max_duration }}
+{% for file, attr in files %}
+#EXTINF:{{ attr.duration }}, {{ attr.artist }} - {{ attr.title }}
+{{ file }}
+{% endfor %}
+#EXT-X-ENDLIST

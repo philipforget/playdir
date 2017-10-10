@@ -1,0 +1,12 @@
+---
+
+version: "3"
+services:
+  app:
+    build: .
+    env_file: envs/local.env
+    ports:
+      - 8005:8005
+    volumes:
+      - ./playdir:/app/playdir
+      - /mnt/media/Music:/media:ro
